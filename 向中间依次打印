@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<string.h>
+#include<Windows.h>
+int main()
+{
+	char arr[] = "**************\0";
+	char aee[]= "Welcome to Xian\0";
+	int left = 0;
+	int right = strlen(aee)-1;
+    printf("%s\n", arr);
+	Sleep(1000);
+	while (left<= right)
+	{
+		arr[left] = aee[left];
+		arr[right] = aee[right];
+		printf("%s\n", arr);
+		Sleep(2000);
+		left ++;
+		right --;
+	}
+	return 0;
+
+}
