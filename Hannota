@@ -1,0 +1,26 @@
+void yidong(char X, char Y)
+{
+	printf("%c->%c ", X,Y);
+}
+void hannota(int n, char A, char B, char C)
+{
+	if (n == 1)
+	{
+		yidong(A, C);
+	}
+	else
+	{
+		hannota(n - 1,A,C,B);
+		yidong(A, C);
+		hannota(n - 1,B,A,C);
+	}
+}
+int main()
+{
+	int n = 0;
+	printf("请输入阶数=");
+	scanf("%d", &n);
+	hannota(n, 'A', 'B', 'C');
+	return 0;
+
+}
