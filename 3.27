@@ -1,0 +1,26 @@
+#include <stdio.h>
+int Bac(int n)
+{
+	int i ;
+	int a = 1;
+	int b = 1;
+	int c = 1;
+	for (i=3;i <= n; i++)
+	{
+		c = a + b;
+		a = b;
+		b = c;
+	}
+	return c;
+
+}
+int main()
+{
+	int n = 0;
+	int ret = 0;
+	scanf_s ("%d", &n);
+	ret = Bac(n);
+		printf("ret=%d\n", ret);
+	return 0;
+
+}
